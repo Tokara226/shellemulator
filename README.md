@@ -17,3 +17,19 @@
 **Настройки:**
 На текущем этапе дополнительные конфигурационные файлы не используются.
 
+## 4. Примеры использования
+
+Пример стандартного сеанса работы:
+
+```text
+ivan@macbook:~$ ls
+ls
+ivan@macbook:~$ cd UnityProjects
+cd UnityProjects
+ivan@macbook:~$ ls "Active Ragdoll Script.cs"
+ls Active Ragdoll Script.cs
+ivan@macbook:~$ cd "Grounded 2
+Ошибка: обнаружена незакрытая кавычка.
+ivan@macbook:~$ git status
+git: команда не найдена
+ivan@macbook:~$ exit
