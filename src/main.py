@@ -10,7 +10,6 @@ def get_prompt() -> str:
 
 def process_command(user_input: str) -> None:
     try:
-        # shlex.split разбивает строку с учетом пробелов и кавычек
         parts = shlex.split(user_input.strip())
     except ValueError:
         print("Ошибка")
