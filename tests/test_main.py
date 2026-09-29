@@ -1,5 +1,8 @@
-import unittest
+from src.main import process_command
 
-class TestEmulator(unittest.TestCase):
-    def test_dummy(self):
-        self.assertTrue(True)
+process_command("ls")
+process_command("cd Documents")
+process_command('ls "Git"')
+process_command('cd "Github')
+process_command("   ")
+process_command("exit")

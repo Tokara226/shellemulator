@@ -1,16 +1,45 @@
-# This is a sample Python script.
+import os
+import socket
+import sys
+import shlex
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+def get_prompt() -> str:
+    user = os.getlogin()
+    host = socket.gethostname()
+    return f"{user}@{host}:~$ "
 
+def process_command(user_input: str) -> None:
+    try:
+        # shlex.split разбивает строку с учетом пробелов и кавычек
+        parts = shlex.split(user_input.strip())
+    except ValueError:
+        print("Ошибка")
+        return
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+    if not parts:
+        return
 
+    command = parts[0]
+    args = parts[1:]
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    if command == "exit":
+        sys.exit(0)
+    elif command in ("ls", "cd"):
+        print(f"{command} {' '.join(args)}" if args else command)
+    else:
+        print(f"{command}: команда не найдена")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+def main() -> None:
+    prompt = get_prompt()
+    while True:
+        try:
+            user_input = input(prompt)
+            process_command(user_input)
+        except EOFError:
+            break
+        except KeyboardInterrupt:
+            print()
+            continue
+
+if __name__ == "__main__":
+    main()
