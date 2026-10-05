@@ -108,5 +108,115 @@
         "timestamp": "2026-10-05 20:45:23",
         "command": "exit",
         "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:03:10",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:03:10",
+        "command": "cd practice/lab1",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:03:10",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:03:10",
+        "command": "cd ../../config/settings",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:03:10",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:03:10",
+        "command": "cd /docs",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:03:10",
+        "command": "ls \"manual.pdf\"",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:03:10",
+        "command": "cd /FakeFolder",
+        "error": "Ошибка выполнения cd"
+    },
+    {
+        "timestamp": "2026-10-05 21:03:20",
+        "command": "exit",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:06:53",
+        "command": "ls ",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:06:57",
+        "command": "docs",
+        "error": "docs: команда не найдена"
+    },
+    {
+        "timestamp": "2026-10-05 21:07:03",
+        "command": "cd docs",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:07:05",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:07:10",
+        "command": "cs ..",
+        "error": "cs: команда не найдена"
+    },
+    {
+        "timestamp": "2026-10-05 21:07:14",
+        "command": "cd ..",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:07:15",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:07:28",
+        "command": "ls \"config\"",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:07:56",
+        "command": "cd config/settings",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:07:58",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:08:01",
+        "command": "cd",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:08:16",
+        "command": "ls \"config/settings\"",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:08:20",
+        "command": "exit",
+        "error": null
     }
 ]
