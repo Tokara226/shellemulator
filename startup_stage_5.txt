@@ -1,0 +1,6 @@
+ls
+touch newfile.txt
+ls
+touch practice/test.txt
+ls practice
+touch /FakeFolder/file.txt

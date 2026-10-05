@@ -323,5 +323,90 @@
         "timestamp": "2026-10-05 21:26:09",
         "command": "exit",
         "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:29:51",
+        "command": "cd docs",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:29:53",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:30:07",
+        "command": "touch hello.txt",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:30:09",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:30:39",
+        "command": "ls \"hello.txt\"",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:30:51",
+        "command": "tail hello.txt",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:31:14",
+        "command": "touch mama",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:31:18",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:31:22",
+        "command": "cd mama",
+        "error": "Ошибка выполнения cd"
+    },
+    {
+        "timestamp": "2026-10-05 21:31:58",
+        "command": "exit",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:33:34",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:33:34",
+        "command": "touch newfile.txt",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:33:34",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:33:34",
+        "command": "touch practice/test.txt",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:33:34",
+        "command": "ls practice",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:33:34",
+        "command": "touch /FakeFolder/file.txt",
+        "error": "Ошибка выполнения touch"
+    },
+    {
+        "timestamp": "2026-10-05 21:33:34",
+        "command": "exit",
+        "error": null
     }
 ]

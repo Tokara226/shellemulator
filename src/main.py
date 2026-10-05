@@ -93,7 +93,6 @@ class VirtualFileSystem:
         self.cwd = target
         return True
 
-    # Добавлен метод tail
     def tail(self, args):
         if not args:
             print("tail: отсутствует операнд файла")
@@ -118,6 +117,31 @@ class VirtualFileSystem:
         except Exception as e:
             print(f"tail: ошибка декодирования файла: {e}")
             return False
+
+    # Добавлен метод touch (Этап 5)
+    def touch(self, args):
+        if not args:
+            print("touch: пропущен операнд файла")
+            return False
+
+        target = self._resolve_path(args[0])
+
+        # Если файл уже существует, команда считается успешной (в реальном UNIX обновляется время)
+        if target in self.fs:
+            return True
+
+        parent = os.path.dirname(target)
+        # Проверяем, существует ли папка, в которой мы пытаемся создать файл
+        if parent not in self.fs or self.fs[parent]["type"] != "dir":
+            print(f"touch: невозможно создать '{args[0]}': Нет такого каталога")
+            return False
+
+        # Добавляем пустой файл в оперативную память
+        self.fs[target] = {"type": "file", "content": ""}
+        if "children" not in self.fs[parent]:
+            self.fs[parent]["children"] = set()
+        self.fs[parent]["children"].add(os.path.basename(target))
+        return True
 
 
 def load_configuration():
@@ -193,7 +217,6 @@ def process_command(command_line, log_path, vfs):
 
     cmd, cmd_args = args[0], args[1:]
 
-    # Добавлена логика для новых команд
     if cmd == "exit":
         log_event(log_path, command_line)
         sys.exit(0)
@@ -208,6 +231,10 @@ def process_command(command_line, log_path, vfs):
     elif cmd == "tail":
         success = vfs.tail(cmd_args)
         log_event(log_path, command_line, error_message=None if success else "Ошибка выполнения tail")
+        return success
+    elif cmd == "touch":
+        success = vfs.touch(cmd_args)
+        log_event(log_path, command_line, error_message=None if success else "Ошибка выполнения touch")
         return success
     elif cmd == "who":
         user = getpass.getuser()
@@ -238,6 +265,7 @@ def run_startup_script(script_path, log_path, prompt, vfs):
             if not success:
                 print(f"Скрипт остановлен из-за ошибки")
                 break
+    print("========================\n")
 
 
 def main():
