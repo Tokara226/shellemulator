@@ -1,51 +1,111 @@
 [
     {
-        "timestamp": "2026-10-05 19:50:09",
-        "command": "hello",
-        "error": "hello: команда не найдена"
-    },
-    {
-        "timestamp": "2026-10-05 19:50:14",
-        "command": "ls \"hello\"",
+        "timestamp": "2026-10-05 20:37:16",
+        "command": "cd .",
         "error": null
     },
     {
-        "timestamp": "2026-10-05 19:50:18",
-        "command": "ls \"hello",
-        "error": "Ошибка: обнаружена незакрытая кавычка."
-    },
-    {
-        "timestamp": "2026-10-05 19:50:21",
-        "command": "exit",
-        "error": null
-    },
-    {
-        "timestamp": "2026-10-05 19:57:28",
-        "command": "учше",
-        "error": "учше: команда не найдена"
-    },
-    {
-        "timestamp": "2026-10-05 19:57:31",
-        "command": "exit",
-        "error": null
-    },
-    {
-        "timestamp": "2026-10-05 20:07:48",
+        "timestamp": "2026-10-05 20:37:18",
         "command": "ls",
         "error": null
     },
     {
-        "timestamp": "2026-10-05 20:07:48",
-        "command": "cd UnityProjects",
+        "timestamp": "2026-10-05 20:38:23",
+        "command": "cd ..",
         "error": null
     },
     {
-        "timestamp": "2026-10-05 20:07:48",
-        "command": "fakecommand",
-        "error": "fakecommand: команда не найдена"
+        "timestamp": "2026-10-05 20:38:25",
+        "command": "ls",
+        "error": null
     },
     {
-        "timestamp": "2026-10-05 20:09:49",
+        "timestamp": "2026-10-05 20:40:14",
+        "command": "cd practice",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:40:19",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:40:25",
+        "command": "cd lsb1",
+        "error": "Ошибка выполнения cd"
+    },
+    {
+        "timestamp": "2026-10-05 20:40:32",
+        "command": "cd /lab1",
+        "error": "Ошибка выполнения cd"
+    },
+    {
+        "timestamp": "2026-10-05 20:40:42",
+        "command": "ls \"lab1\"",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:40:58",
+        "command": "cd lab1",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:41:01",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:42:11",
+        "command": "cd ..",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:42:12",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:42:16",
+        "command": "cd .",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:42:18",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:42:27",
+        "command": "cd",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:42:29",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:45:07",
+        "command": "cd practice/lab1",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:45:09",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:45:16",
+        "command": "cd ..",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:45:18",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:45:23",
         "command": "exit",
         "error": null
     }

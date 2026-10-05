@@ -1,3 +1,8 @@
 ls
-cd UnityProjects
-fakecommand
+cd practice/lab1
+ls
+cd ../../config/settings
+ls
+cd /docs
+ls "manual.pdf"
+cd /FakeFolder

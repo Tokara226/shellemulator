@@ -1,0 +1,10 @@
+path,type,content
+/practice,dir,
+/practice/lab1,dir,
+/practice/lab1/main.py,file,cHJpbnQoIkhlbGxvIFdvcmxkIik=
+/practice/lab1/report.docx,file,T3RjaGV0
+/docs,dir,
+/docs/manual.pdf,file,TWFudWFs
+/config,dir,
+/config/settings,dir,
+/config/settings/env.csv,file,Q29uZmlndXJhdGlvbg==
