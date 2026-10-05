@@ -218,5 +218,110 @@
         "timestamp": "2026-10-05 21:08:20",
         "command": "exit",
         "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:17:21",
+        "command": "?who",
+        "error": "?who: команда не найдена"
+    },
+    {
+        "timestamp": "2026-10-05 21:17:25",
+        "command": "who",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:18:17",
+        "command": "cd docs",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:18:29",
+        "command": "tail syslog.txt",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:18:41",
+        "command": "exit",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:00",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:00",
+        "command": "cd practice/lab1",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:00",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:00",
+        "command": "cd ../../config/settings",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:00",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:00",
+        "command": "cd /docs",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:00",
+        "command": "ls \"manual.pdf\"",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:00",
+        "command": "cd /FakeFolder",
+        "error": "Ошибка выполнения cd"
+    },
+    {
+        "timestamp": "2026-10-05 21:26:00",
+        "command": "exit",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:09",
+        "command": "who",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:09",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:09",
+        "command": "cd docs",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:09",
+        "command": "tail syslog.txt",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:09",
+        "command": "cd ..",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 21:26:09",
+        "command": "tail practice",
+        "error": "Ошибка выполнения tail"
+    },
+    {
+        "timestamp": "2026-10-05 21:26:09",
+        "command": "exit",
+        "error": null
     }
 ]

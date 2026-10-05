@@ -1,0 +1,7 @@
+who
+ls
+cd docs
+tail syslog.txt
+cd ..
+tail practice
+cd /FakeFolder

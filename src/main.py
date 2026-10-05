@@ -8,6 +8,7 @@ import json
 import datetime
 import os
 import csv
+import base64
 
 
 class VirtualFileSystem:
@@ -92,6 +93,32 @@ class VirtualFileSystem:
         self.cwd = target
         return True
 
+    # Добавлен метод tail
+    def tail(self, args):
+        if not args:
+            print("tail: отсутствует операнд файла")
+            return False
+
+        target = self._resolve_path(args[0])
+        if target not in self.fs:
+            print(f"tail: невозможно открыть '{args[0]}': Нет такого файла или каталога")
+            return False
+
+        node = self.fs[target]
+        if node["type"] != "file":
+            print(f"tail: ошибка чтения '{args[0]}': Это каталог")
+            return False
+
+        try:
+            content = base64.b64decode(node["content"]).decode('utf-8')
+            lines = content.splitlines()
+            for line in lines[-10:]:
+                print(line)
+            return True
+        except Exception as e:
+            print(f"tail: ошибка декодирования файла: {e}")
+            return False
+
 
 def load_configuration():
     parser = argparse.ArgumentParser(description="UNIX Shell Emulator")
@@ -140,12 +167,12 @@ def log_event(log_path, command, error_message=None):
     logs = []
     if os.path.exists(log_path):
         try:
-            with open(log_path, "r", encoding="utf-8") as f:
+            with open(log_path, "r", encoding="utf-8", errors="replace") as f:
                 logs = json.load(f)
         except json.JSONDecodeError:
             pass
     logs.append(event)
-    with open(log_path, "w", encoding="utf-8") as f:
+    with open(log_path, "w", encoding="utf-8", errors="replace") as f:
         json.dump(logs, f, ensure_ascii=False, indent=4)
 
 
@@ -166,6 +193,7 @@ def process_command(command_line, log_path, vfs):
 
     cmd, cmd_args = args[0], args[1:]
 
+    # Добавлена логика для новых команд
     if cmd == "exit":
         log_event(log_path, command_line)
         sys.exit(0)
@@ -177,6 +205,16 @@ def process_command(command_line, log_path, vfs):
         success = vfs.cd(cmd_args)
         log_event(log_path, command_line, error_message=None if success else "Ошибка выполнения cd")
         return success
+    elif cmd == "tail":
+        success = vfs.tail(cmd_args)
+        log_event(log_path, command_line, error_message=None if success else "Ошибка выполнения tail")
+        return success
+    elif cmd == "who":
+        user = getpass.getuser()
+        now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+        print(f"{user}  tty1  {now}")
+        log_event(log_path, command_line)
+        return True
     else:
         error_msg = f"{cmd}: команда не найдена"
         print(error_msg)
