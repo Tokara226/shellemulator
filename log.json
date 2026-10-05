@@ -28,5 +28,25 @@
         "timestamp": "2026-10-05 19:57:31",
         "command": "exit",
         "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:07:48",
+        "command": "ls",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:07:48",
+        "command": "cd UnityProjects",
+        "error": null
+    },
+    {
+        "timestamp": "2026-10-05 20:07:48",
+        "command": "fakecommand",
+        "error": "fakecommand: команда не найдена"
+    },
+    {
+        "timestamp": "2026-10-05 20:09:49",
+        "command": "exit",
+        "error": null
     }
 ]
