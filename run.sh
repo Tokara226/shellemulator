@@ -1,3 +1,3 @@
 #!/bin/bash
-
-uv run ~/Downloads/КУ/src/main.py
+cd "$(dirname "$0")"
+uv run src/main.py --config config.xml

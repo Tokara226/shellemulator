@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <vfs_path>vfs.tar</vfs_path>
+    <log_path>log.json</log_path>
+    <script_path>startup.txt</script_path>
+</config>
