@@ -143,10 +143,10 @@ class VirtualFileSystem:
 
 def load_configuration():
     parser = argparse.ArgumentParser(description="UNIX Shell Emulator")
-    parser.add_argument('--config', type=str, help='Путь к конфигурационному файлу XML')
-    parser.add_argument('--vfs', type=str, help='Путь к физическому расположению VFS')
-    parser.add_argument('--log', type=str, help='Путь к лог-файлу JSON')
-    parser.add_argument('--script', type=str, help='Путь к стартовому скрипту')
+    parser.add_argument('--config', type=str)
+    parser.add_argument('--vfs', type=str)
+    parser.add_argument('--log', type=str)
+    parser.add_argument('--script', type=str)
 
     args = parser.parse_args()
 
