@@ -24,7 +24,7 @@ class VirtualFileSystem:
         try:
             with open(csv_path, 'r', encoding='utf-8') as f:
                 reader = csv.reader(f)
-                next(reader, None)  # Пропускаем заголовок
+                next(reader, None)
                 for row in reader:
                     if len(row) < 2:
                         print("Ошибка загрузки VFS: неверный формат CSV (недостаточно столбцов).")
@@ -118,7 +118,6 @@ class VirtualFileSystem:
             print(f"tail: ошибка декодирования файла: {e}")
             return False
 
-    # Добавлен метод touch (Этап 5)
     def touch(self, args):
         if not args:
             print("touch: пропущен операнд файла")
@@ -126,17 +125,15 @@ class VirtualFileSystem:
 
         target = self._resolve_path(args[0])
 
-        # Если файл уже существует, команда считается успешной (в реальном UNIX обновляется время)
         if target in self.fs:
             return True
 
         parent = os.path.dirname(target)
-        # Проверяем, существует ли папка, в которой мы пытаемся создать файл
         if parent not in self.fs or self.fs[parent]["type"] != "dir":
             print(f"touch: невозможно создать '{args[0]}': Нет такого каталога")
             return False
 
-        # Добавляем пустой файл в оперативную память
+        '''Добавляем пустой файл в оперативную память'''
         self.fs[target] = {"type": "file", "content": ""}
         if "children" not in self.fs[parent]:
             self.fs[parent]["children"] = set()
